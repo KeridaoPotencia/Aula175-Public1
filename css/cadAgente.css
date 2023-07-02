@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+#logo{
+    height: 65px;
+    width: 65px;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: whitesmoke;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+}
+
+.btnLoginMed {
+    text-align: center;
+    justify-content: center;
+}
+
+.navigation .btnLoginMed{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+}
+
+.navigation .btnLoginMed:hover{
+    background: blue;
+    color: whitesmoke;
+}
+
+body{
+    background: url('../images/img_bg_5.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.w50 {
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+}
+
+.box{
+    display: flex;
+    width: 930px;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.form-box{
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    padding: 30px 40px;
+    width: 50%;
+    border-radius: 6px;
+}
+
+.form-box h2{
+    font-size: 30px;
+}
+.form-box p{
+    font-weight: bold;
+    color: #162938;
+}
+.form-box p a{
+    color: blue;
+    text-decoration: none;
+}
+.form-box form{
+    margin: 20px 0;
+}
+form .input-group{
+    margin-bottom: 15px;
+}
+form .input-group label{
+    color: #3D3D3D;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+form .input-group input{
+    width: 100%;
+    height: 47px;
+    background-color: rgba(255, 255, 255, 0.32);
+    box-shadow: 30px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid transparent;
+    padding: 15px;
+    font-size: 15px;
+    color: #616161;
+    transition: all 0.4s ease;
+}
+form .input-group input:focus{
+    border-color: #162938;
+}
+form .input-group button{
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-top: 15px;
+    outline: none;
+    border: none;
+}
+@media (max-width:930px) {
+    .img-box{
+        display: none;
+    }
+    .box{
+        width: 700px;
+    }
+    .form-box{
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+@media (max-width:500px) {
+    .w50{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.register {
+    font-size: 0.9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+}
+
+.register p a {
+    color: blue;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline ;
+}
+
+footer { 
+    text-align: center; 
+    display: -ms-grid;
+    list-style-type: none;
+    color: whitesmoke;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    padding: 2px 2px;
+    background: transparent;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99;
+    text-shadow: 1px 1px 1px #141414;
+}
+
+.logoFooter { 
+    height: 50px;
+    width: 50px;
+    margin-bottom: -10px;
+}
+
+@media (max-width:930px) {
+    .img-box{
+        display: none;
+    }
+    .container{
+        width: 700px;
+    }
+    .cadMedico{
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+@media (max-width:500px) {
+    .w50{
+        width: 100%;
+        padding: 0;
+    }
+}

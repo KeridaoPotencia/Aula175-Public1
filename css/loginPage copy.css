@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}*/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoAntenna {
+    height: 3rem;
+    width: 3rem;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+}
+
+.navList ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navItem {
+    margin: -5px 50px;
+}
+
+.navLink {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: whitesmoke;
+    font-weight: 500;
+}
+
+.mobileIcon {
+    display: none;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+    .navBar {
+        padding: 1.5rem 4rem;
+    }
+    .navItem {
+        display: none;
+    }
+    .mobileIcon {
+        display: block;
+    }
+    .mobileIcon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../images/telemedicina.jpg');
+    background-size: cover;
+}
+
+.container {
+    width: 360px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+}
+
+.card {
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(#333, #333);
+    transition: all .5s;
+}
+
+.card:hover {
+    background-image: linear-gradient(#0058fc, #15008d);
+}
+
+.card .img {
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-image: url('./assets/Evelynn.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: all .5s;
+    z-index: 2;
+    position: relative;
+    opacity: .8;
+}
+
+.card .img span {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 100;
+    font-style: italic;
+    transition: all .5s;
+}
+
+.card:hover .img {
+    width: 430px;
+    opacity: 1;
+}
+
+.card:hover .img span {
+    font-size: 28px;
+}
+
+.card .content {
+    padding: 0px 20px;
+    height: 0;
+    opacity: 0;
+    transition: all .5s;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    transform: translateY(30px);
+}
+
+.card:hover .content {
+    height: 260px;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card .content p {
+    margin: 0;
+}
+
+.card .content .title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card .content .desc {
+    font-size: 14px;
+    font-weight: 100;
+    opacity: .8;
+    margin-top: 8px;
+}
+
+.card .arrow {
+    padding: 15px;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card:hover .arrow {
+    transform: rotate(0);
+}
+
+.card .arrow span {
+    font-size: 24px;
+}
+
+
+/*.card{
+    display: flex;
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(32, 104, 163, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    /*border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);*/
+   /* background: blue;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 450px;
+    height: 355px;
+    top: 0;
+    right: 35px;
+    transition: 1.9s;
+    background-color: blue;
+    transform: rotate(-45deg) translate(0, -100px);
+}*/
+
+#medico{
+    /*background-image: url("../images/loginMedico.jpg");*/
+    background-size: 100%;
+}
+
+#agente{
+    /*background-image: url("../images/loginAgente.jpg");*/
+    background-size: 100%;
+}
+
+.containerCard .card .content{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.containerCard .card:hover .content{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.containerCard .card .content h2{
+    /*position: absolute;*/
+    top: -80px;
+    right: 30px;
+    font-size: 1.9em;
+    color: whitesmoke;
+    pointer-events: none;
+}
+
+
+
+.containerCard .card .content p{
+    font-size: 1em;
+    color: whitesmoke;
+    font-weight: 300;
+    z-index: 1;
+}
+
+p {
+    padding-top: 20px;
+}
+
+footer { 
+    text-align: center; 
+    display: -ms-grid;
+    list-style-type: none;
+    color: whitesmoke;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    padding: 2px 2px;
+    background: transparent;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 99;
+    text-shadow: 1px 1px 1px #141414;
+}
+
+.logoFooter { 
+    height: 50px;
+    width: 50px;
+    margin-bottom: -15px;
+}
